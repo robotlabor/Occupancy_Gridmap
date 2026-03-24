@@ -1,0 +1,29 @@
+ORTHO_GRIDMAP ubuntu parancsok 
+----------------------------------------------------------------------------------------------------------------------------
+(GRIDMAP)
+
+cd ~/ros2_ws
+colcon build
+source install/setup.bash
+
+//elérési út!
+ros2 run ortho_gridmap ortho_gridmap_node \
+  --ros-args \
+  -p tif_path:="/mnt/d/   ...     " \
+  -p grid_resolution:=0.3
+
+----------------------------------------------------------------------------------------------------------------------------
+(GUI)
+
+cd ~/ros2_ws
+colcon build
+source install/setup.bash
+
+ros2 run gridmap_editor map_editor
+
+----------------------------------------------------------------------------------------------------------------------------
+(FOGLOVE)
+
+source ~/ros2_ws/install/setup.bash
+ros2 run foxglove_bridge foxglove_bridge
+Listening on ws://localhost:8765
