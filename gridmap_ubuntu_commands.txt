@@ -1,4 +1,5 @@
 ORTHO_GRIDMAP ubuntu parancsok 
+
 ----------------------------------------------------------------------------------------------------------------------------
 (GRIDMAP)
 
@@ -6,7 +7,7 @@ cd ~/ros2_ws
 colcon build
 source install/setup.bash
 
-//elérési út!
+//need path!
 ros2 run ortho_gridmap ortho_gridmap_node \
   --ros-args \
   -p tif_path:="/mnt/d/   ...     " \
@@ -20,6 +21,11 @@ colcon build
 source install/setup.bash
 
 ros2 run gridmap_editor map_editor
+
+//mouse interactions:
+  - left button -> FREE
+  - middle button (or shift + left button) -> UNKNOWN
+  - right button -> OCCUPIED
 
 ----------------------------------------------------------------------------------------------------------------------------
 (FOGLOVE)
