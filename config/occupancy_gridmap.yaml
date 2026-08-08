@@ -1,0 +1,12 @@
+ortho_gridmap_node:
+  ros__parameters:
+    tif_path: "/absolute/path/to/map.tif"
+    grid_resolution: 0.3
+    map_topic: "/map"
+    map_frame: "map"
+    publish_period: 1.0
+
+map_editor:
+  ros__parameters:
+    input_map_topic: "/map"
+    output_map_topic: "/edited_map"
