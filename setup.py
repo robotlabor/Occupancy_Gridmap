@@ -26,8 +26,8 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='Milán Majoros',
-    maintainer_email='vagyok.milan@gmail.com',
+    maintainer='',
+    maintainer_email='@gmail.com',
     description=(
         'GeoTIFF OccupancyGrid generation and a graphical map, cone line, '
         'cone arc, coordinate polygon, and robot start editor for ROS 2.'
