@@ -91,7 +91,7 @@ Install all dependencies declared by the workspace packages:
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd ~/ros2_ws
+cd /path/to/ros2_workspace
 rosdep install --from-paths src --ignore-src -r -y
 ```
 
@@ -99,7 +99,7 @@ rosdep install --from-paths src --ignore-src -r -y
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd ~/ros2_ws
+cd /path/to/ros2_workspace
 colcon build --packages-select occupancy_gridmap --symlink-install
 source install/setup.bash
 ```
@@ -110,7 +110,7 @@ Start the converter and editor together:
 
 ```bash
 ros2 launch occupancy_gridmap occupancy_gridmap.launch.py \
-  tif_path:=/home/milan/zala.tif \
+  tif_path:=/path/to/georeferenced_map.tif \
   grid_resolution:=0.3
 ```
 
@@ -123,7 +123,7 @@ PyQt5 window opens and keeps a local editable copy.
 
 ```bash
 ros2 launch occupancy_gridmap occupancy_gridmap.launch.py \
-  tif_path:=/absolute/path/to/map.tif \
+  tif_path:=/path/to/georeferenced_map.tif \
   grid_resolution:=0.3
 ```
 
@@ -142,7 +142,7 @@ Optional arguments:
 
 ```bash
 ros2 launch occupancy_gridmap ortho_gridmap.launch.py \
-  tif_path:=/absolute/path/to/map.tif \
+  tif_path:=/path/to/georeferenced_map.tif \
   grid_resolution:=0.3 \
   map_topic:=/map \
   map_frame:=map \
@@ -153,7 +153,7 @@ Direct node execution is also supported:
 
 ```bash
 ros2 run occupancy_gridmap ortho_gridmap_node --ros-args \
-  -p tif_path:=/absolute/path/to/map.tif \
+  -p tif_path:=/path/to/georeferenced_map.tif \
   -p grid_resolution:=0.3
 ```
 
@@ -318,7 +318,7 @@ motion-planning package:
 
 ```bash
 ros2 launch path_planner_follower integrated_navigation.launch.py \
-  tif_path:=/home/milan/zala.tif \
+  tif_path:=/path/to/georeferenced_map.tif \
   grid_resolution:=0.3 \
   controller:=pure_pursuit \
   simulation:=true
@@ -333,7 +333,7 @@ Run the package tests:
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd ~/ros2_ws
+cd /path/to/ros2_workspace
 colcon test --packages-select occupancy_gridmap
 colcon test-result --verbose
 ```
