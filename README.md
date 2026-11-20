@@ -164,17 +164,7 @@ Start the PyQt5 editor GUI to visualize and edit the incoming `/raw_map` topic, 
 * **`Save map` / `Load map` Buttons:** Save or load compressed `.npz` map archives (including UTM origin and resolution metadata) in `~/ros2_ws/data/maps`.
 * **`Publish map` Button:** Publishes the edited grid map to the `/map` topic.
 
-### 3. Full Launch Package (`occupancy_gridmap2.launch.py`)
-Launch both the v2.0 generator and editor interface together using the provided launch configuration:
-
-    source /opt/ros/jazzy/setup.bash
-    source ~/ros2_ws/install/setup.bash
-
-    ros2 launch occupancy_gridmap occupancy_gridmap2.launch.py \
-      tif_path:="/path/to/your/orthophoto.tif" \
-      grid_resolution:=0.3
-
-### 4. Foxglove / RViz2 Visualization
+### 3. Foxglove / RViz2 Visualization
 To stream topics to Foxglove Studio via `foxglove_bridge`:
 
     source ~/ros2_ws/install/setup.bash
